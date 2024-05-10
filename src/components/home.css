@@ -17,6 +17,12 @@ body {
 }
 
 .navbar {
+    /* position: relative;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;*/
     position: relative;
     width: 100%;
     padding: 3px 5px;
@@ -59,7 +65,9 @@ img {
     transition: transform 0.3s ease;
 }
 
-/*  */
+.nav-items>ul>li:hover::after {
+    transform: scaleX(1);
+}
 
 .nav-logo a,
 .nav-button a {
@@ -94,7 +102,10 @@ img {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-/*  */
+.nav-button:hover .anim-layer {
+    width: 100%;
+    left: 0;
+}
 
 .nav-button:hover a {
     color: #141214;
@@ -108,6 +119,8 @@ img {
     position: relative;
     z-index: 1;
 }
+
+
 
 
 section .main .main_content {
@@ -125,6 +138,8 @@ section .main .main_content .main_text h1 {
     left: 5%;
 
 }
+
+
 
 section .main .main_content .main_text p {
     width: 600px;
@@ -165,4 +180,114 @@ section .main .button i {
     transition: 0.3s;
 }
 
-/*  */
+section .main .button:hover i {
+    transform: translateX(10px);
+    cursor: pointer;
+    box-shadow: 0 0 2 rgba(0, 0, 0, 0.2);
+}
+
+/* CONTACT FORM */
+
+.contactf {
+    text-align: center;
+    align-items: center;
+    margin-top: 150px;
+    color: #000;
+    text-shadow: 1px 1px 0 rgba(white, 1);
+    font-size: 60px;
+}
+
+.contactf span {
+    color: #ec2c02;
+}
+
+form {
+    max-width: 600px;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+
+    background-color: beige;
+    resize: none;
+
+}
+
+#input-submit {
+    color: white;
+    background: #ec2c02;
+    cursor: pointer;
+
+
+}
+
+textarea {
+    height: 126px;
+}
+
+
+
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right {
+    width: 50%;
+}
+
+.left {
+    margin-right: 2%;
+}
+
+
+
+
+/* Clearfix */
+
+
+.footer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #004aad;
+}
+
+.footer-text {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: #fff;
+}
