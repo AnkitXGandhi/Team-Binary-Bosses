@@ -64,7 +64,7 @@ export const Home = () => {
             <br />
             <br />
             <div className="button">
-              <a>Take a Quiz</a>
+              <Link to="/quiz">Take a Quiz</Link>
               <i className="fa-solid fa-chevron-right" />
             </div>
           </div>
