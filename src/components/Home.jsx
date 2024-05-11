@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/home.css";
 import SkillSailer from "../assets/SkillSailer.png";
+import { Link } from "react-router-dom";
 import study from "../assets/study.jpg";
 export const Home = () => {
   return (
@@ -38,7 +39,7 @@ export const Home = () => {
         </div>
         <div className="nav-button">
           <div className="anim-layer" />
-          <a>Login / Sign Up</a>
+          <Link to="/Login">Login / Sign Up</Link>
         </div>
       </div>
       <section>

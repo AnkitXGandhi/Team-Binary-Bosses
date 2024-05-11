@@ -18,10 +18,17 @@ SkillSailer-
 
 A website that serves as a comprehensive platform for job seekers and recruiters, facilitating streamlined recruitment processes. It features personalized job recommendations, detailed candidate profiles, and robust skills assessment tools powered by AI and machine learning. With a user-friendly interface and emphasis on data privacy, the website optimizes the recruitment experience for both the parties.
 
+Approach
+
+1. Data Collection and Preparation: To gather relevant data sources including resumes, job descriptions, skill assessments, and performance evaluations.
+2. Skills Assessment and Profiling: To develop a standardized skills assessment test or utilize existing assessment tools to evaluate candidates' proficiency in various skills.
+3. Machine Learning Model Development: Train machine learning models using labeled data to predict the suitability of candidates for different job roles.
+4. Recommendation Engine Implementation: To develop a recommendation engine that matches candidates with suitable job openings based on their profiles and the requirements of the job roles.
+5. Performance Monitoring and Feedback Loop: Implement tools and dashboards to monitor the performance of candidates after they are hired.
+
 Technologies Used
 
-Next Js
-Machine Learning
+React Js
 Natural Language Processing
 Firebase
-Django
+FastAPI
