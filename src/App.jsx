@@ -1,6 +1,7 @@
 import React from "react";
 import { Home } from "./components/Home.jsx";
-import { Login } from "./login/login.jsx";
+import { Login } from "./login/Login.jsx";
+
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {

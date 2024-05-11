@@ -120,8 +120,28 @@ img {
     z-index: 1;
 }
 
+/* About */
 
 
+#aboutpg h1 {
+    text-align: center;
+    margin-top: 125px;
+    font-size: 60px;
+}
+
+#aboutpg span {
+    color: #ec2c02;
+}
+
+#aboutpg h3 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#aboutpg p {
+    justify-content: center;
+    align-items: justify;
+}
 
 section .main .main_content {
     display: flex;
@@ -187,11 +207,15 @@ section .main .button:hover i {
 }
 
 /* CONTACT FORM */
+#confo {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
 
 .contactf {
     text-align: center;
     align-items: center;
-    margin-top: 150px;
+
     color: #000;
     text-shadow: 1px 1px 0 rgba(white, 1);
     font-size: 60px;
@@ -203,7 +227,7 @@ section .main .button:hover i {
 
 form {
     max-width: 600px;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     margin: 20px auto;
 }
@@ -254,7 +278,7 @@ textarea {
 
 
 
-/* Clearfix */
+
 
 
 .footer {

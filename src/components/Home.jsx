@@ -20,12 +20,12 @@ export const Home = () => {
         <div className="nav-items">
           <ul>
             <li>
-              <a href="#">
+              <a href="#navi">
                 <strong>Home</strong>{" "}
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#aboutpg">
                 <strong>About</strong>{" "}
               </a>
             </li>
@@ -68,6 +68,41 @@ export const Home = () => {
               <i className="fa-solid fa-chevron-right" />
             </div>
           </div>
+        </div>
+      </section>
+      <section id="aboutpg">
+        <h1>
+          About <span>Us</span>
+        </h1>
+        <div>
+          <h3>Our Objective</h3>
+          <br></br>
+
+          <p>
+            The objective of SkillSailer is to revolutionize the recruitment
+            process by leveraging advanced technologies such as machine learning
+            and natural language processing to provide personalized job
+            recommendations and accurately assess the true potential of each
+            candidate. By analyzing candidate data, including resumes, skills
+            assessments, and performance evaluations, the solution aims to match
+            candidates with suitable job openings based on their skills,
+            experiences, and preferences. Additionally, it seeks to create
+            comprehensive profiles for each candidate to facilitate better
+            decision-making by recruiters and hiring managers.
+          </p>
+          <br></br>
+
+          <h3>Why Choose SkillSailer?</h3>
+          <br></br>
+          <p>
+            SkillSailer is a website that serves as a comprehensive platform for
+            job seekers and recruiters, facilitating streamlined recruitment
+            processes. It features personalized job recommendations, detailed
+            candidate profiles, and robust skills assessment tools powered by AI
+            and machine learning. With a user-friendly interface and emphasis on
+            data privacy, the website optimizes the recruitment experience for
+            both the parties.
+          </p>
         </div>
       </section>
       <section id="confo">
