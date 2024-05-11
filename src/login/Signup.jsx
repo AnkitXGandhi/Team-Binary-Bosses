@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase"; // Assuming firebase.js is in the same directory
 import { Link } from "react-router-dom";
-import { Signup } from "./Signup";
-import "./login.css";
+import "./Signup.css";
 
-export const Login = () => {
+export const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -17,39 +16,32 @@ export const Login = () => {
     setError(null);
 
     try {
-      const userCredential = await signInWithEmailAndPassword(
+      const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      // User is successfully logged in
-      console.log("User logged in:", userCredential.user);
-      alert("Login successful!"); // Display success message
-      // Optionally, redirect to another page after successful login
+      console.log("User signed up:", userCredential.user);
+      alert("Signup successful!"); // Display success message
+      // Optionally, redirect to another page or login the user automatically
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Signup failed:", error);
 
       // Handle Firebase errors specifically
       const firebaseError = error.code;
       let errorMessage = "";
 
       switch (firebaseError) {
-        case "auth/wrong-password":
-          errorMessage = "Incorrect email or password.";
-          break;
-        case "auth/user-not-found":
-          errorMessage = "User not found. Please create an account.";
+        case "auth/email-already-in-use":
+          errorMessage = "This email address is already in use.";
           break;
         case "auth/invalid-email":
           errorMessage = "Please enter a valid email address.";
           break;
-        case "auth/email-already-in-use":
-          errorMessage = "This email address is already in use.";
-          break;
         case "auth/weak-password":
           errorMessage = "Password must be at least 6 characters long.";
           break;
-        // Handle other potential Firebase errors here
+        // Handle other potential Firebase errors here (e.g., network errors)
         default:
           errorMessage = "An error occurred. Please try again.";
       }
@@ -59,13 +51,11 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <h1 className="login-title">
-        <strong>Login</strong>
-      </h1>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="input-group">
-          <label htmlFor="email" className="input-label">
+    <div className="signup-container">
+      <h1 className="signup-title">Sign Up</h1>
+      <form onSubmit={handleSubmit} className="signup-form">
+        <div className="inputGroup">
+          <label htmlFor="email" className="label">
             Email Address
           </label>
           <input
@@ -74,11 +64,11 @@ export const Login = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="login-input"
+            className="input"
           />
         </div>
-        <div className="input-group">
-          <label htmlFor="password" className="input-label">
+        <div className="inputGroup">
+          <label htmlFor="password" className="label">
             Password
           </label>
           <input
@@ -87,15 +77,15 @@ export const Login = () => {
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="login-input"
+            className="input"
           />
         </div>
-        {error && <div className="error-message">{error}</div>}
-        <button type="submit" className="login-button">
-          Login
+        {error && <div className="error">{error}</div>}
+        <button type="submit" className="submitButton">
+          Sign Up
         </button>
         <div className="link-container">
-          <Link to="/Signup">Don't Have an Account?</Link>
+          <Link to="/login">Already have an account? Login</Link>
         </div>
       </form>
     </div>
